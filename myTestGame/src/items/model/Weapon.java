@@ -1,11 +1,10 @@
 package items.model;
 
-import items.Equippable;
 import items.model.resources.Quality;
 import items.model.resources.WeaponType;
 import items.model.utilities.ItemNameTool;
 
-public class Weapon extends Item implements Equippable {
+public class Weapon extends Equipment {
 	
 	private String name;
 	private int level;
@@ -25,18 +24,6 @@ public class Weapon extends Item implements Equippable {
 	
 	private String generateWeaponName() { 
 		return ItemNameTool.constructRandomWeaponName(quality, type);
-	}
-
-	@Override
-	public void equip() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@Override
-	public void unEquip() {
-		// TODO Auto-generated method stub
-		
 	}
 	
 	@Override

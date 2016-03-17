@@ -1,19 +1,14 @@
 package items.model;
 
-import items.Equippable;
+import items.model.resources.ItemSlot;
 
-public class Equipment extends Item implements Equippable {
+public abstract class Equipment extends Item {
 
-	@Override
-	public void equip() {
+	private ItemSlot slot;
+	
+	public ItemSlot getItemSlot() {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void unEquip() {
-		// TODO Auto-generated method stub
-
+		return slot;
 	}
 
 }
