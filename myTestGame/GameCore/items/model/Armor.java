@@ -13,7 +13,7 @@ public class Armor extends Equipment {
 	private String name;
 	
 	public Armor(int level, Quality quality, ArmorType type){
-		super.slot = slot;
+		//super.slot = slot;
 		this.level = level;
 		this.quality = quality;
 		this.type = type;

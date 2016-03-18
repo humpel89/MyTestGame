@@ -24,6 +24,11 @@ public class ItemCreator {
 		return item;
 	}
 
+//	public Item createItem(int level, Quality quality, ItemType itemType) {
+//		
+//		return null;
+//	}
+	
 	public Item createWeapon(int level, Quality quality, WeaponType type) {
 		Weapon weapon = new Weapon(level, quality, type);
 		return newItem(weapon);
@@ -40,18 +45,6 @@ public class ItemCreator {
 	}
 
 	public Item newRandom() {
-		return null;
-	}
-
-	public Item newRandomWeapon() {
-		return null;
-	}
-
-	public Item newRandomArmor() {
-		return null;
-	}
-
-	public Item newRandomFood() {
 		return null;
 	}
 

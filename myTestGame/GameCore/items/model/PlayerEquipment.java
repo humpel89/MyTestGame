@@ -19,7 +19,7 @@ public class PlayerEquipment {
 		equipment = new HashMap<>();
 	}
 	public void equip(Equipment gear) {
-		Equipment equipped = equipment.get(gear.getItemSlot())
+		Equipment equipped = equipment.get(gear.getItemSlot());
 	}
 
 

@@ -13,7 +13,7 @@ public class ItemTest {
 
 	@Before
 	public void setUp() throws Exception {
-	//	Item sword = new Weapon();
+		//Item item = new Item();
 		
 	}
 

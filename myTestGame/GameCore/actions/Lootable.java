@@ -1,9 +1,11 @@
 package actions;
 
+import java.util.ArrayList;
+
 import items.model.Item;
 
 public interface Lootable {
 	
-	public Item getLoot() throws Exception;
+	public ArrayList<Item> getLoot();
 	
 }

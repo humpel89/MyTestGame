@@ -5,8 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
 import items.model.Armor;
 import items.model.Weapon;
 import items.model.resources.ArmorType;
@@ -31,6 +29,9 @@ public class LootCrateTest {
 
 	@After
 	public void tearDown() throws Exception {
+		bossChest = null;
+		emptyChest = null;
+		randomChest = null;
 	}
 
 	@Test
@@ -40,24 +41,22 @@ public class LootCrateTest {
 	}
 
 	@Test
-	public void testGetLoot() throws Exception{
+	public void testGetLoot() {
 		bossChest.addItem(new Weapon(zoneLevel, Quality.EPIC, WeaponType.AXE));
 		bossChest.addItem(new Armor(zoneLevel, Quality.UNCOMMON, ArmorType.CLOTH));
 		System.out.println(bossChest.getLoot());
-		System.out.println(bossChest.getLoot());
 	}
 
-	@Test (expected=IndexOutOfBoundsException.class)
-	public void testGetLootWhenEmpty() throws Exception{		
+	@Test //(expected=IndexOutOfBoundsException.class)
+	public void testGetLootWhenEmpty() { //throws Exception{		
 		bossChest.addItem(new Weapon(zoneLevel, Quality.COMMON, WeaponType.BROADSWORD));
 		bossChest.addItem(new Armor(zoneLevel, Quality.UNCOMMON, ArmorType.CLOTH));
-		System.out.println(bossChest.getLoot());
 		System.out.println(bossChest.getLoot());
 		assertEquals(null, bossChest.getLoot());
 	}
 
 	@Test
-	public void testIsEmpty() throws Exception{
+	public void testIsEmpty() {
 		bossChest.addItem(new Armor(zoneLevel, Quality.LEGENDARY, ArmorType.CLOTH));
 		System.out.println(bossChest.getLoot());
 		assertEquals(true, emptyChest.isEmpty());

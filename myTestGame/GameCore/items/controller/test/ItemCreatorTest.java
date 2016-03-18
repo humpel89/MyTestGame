@@ -1,4 +1,4 @@
-package items.test;
+package items.controller.test;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import items.controller.ItemCreator;
 import items.model.Item;
-import items.model.Weapon;
 import items.model.resources.ArmorType;
 import items.model.resources.FoodType;
 import items.model.resources.Quality;
@@ -33,6 +32,12 @@ public class ItemCreatorTest {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
+//	@Test
+//	public void testCreateItem(){
+//		Item weapon = creator.createItem(level, Quality.EPIC, );
+//		
+//	}
 	
 	@Test
 	public void testCreateWeapon(){
